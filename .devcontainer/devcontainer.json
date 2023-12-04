@@ -19,8 +19,13 @@
 			"extensions":
 			["ms-toolsai.jupyter", 
 			"ms-python.vscode-pylance",
-			"njpwerner.autodocstring"]
-
+			"njpwerner.autodocstring",
+		    "yzhang.markdown-all-in-one"],
+			"settings": {"python.testing.pytestArgs": [
+				"tests"
+			],
+			"python.testing.unittestEnabled": false,
+			"python.testing.pytestEnabled": true}
 		}
 	}
 
