@@ -1,0 +1,3 @@
+#!/bin/sh
+pip freeze > requirements/requirements.txt
+git add requirements/requirements.txt
