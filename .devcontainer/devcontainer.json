@@ -3,7 +3,7 @@
 {
 	"name": "Rstudio Image",
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-	"image": "ghcr.io/rocker-org/devcontainer/tidyverse:latest",
+	"image": "ghcr.io/rocker-org/devcontainer/tidyverse:4.3",
 
   "postAttachCommand": {
         "rstudio-start": "rserver"
