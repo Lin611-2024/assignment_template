@@ -1,47 +1,17 @@
-// For format details, see https://aka.ms/devcontainer.json. For config options, see the
-// README at: https://github.com/devcontainers/templates/tree/main/src/python
 {
-	"name": "Rstudio Image",
-	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-	"image": "ghcr.io/jbris/stan-cmdstanr-docker:latest",
-	
-	"features": {
+    "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+    "features": {
         "ghcr.io/rocker-org/devcontainer-features/rstudio-server": {}
     },
-
-  "postAttachCommand": {
+    "postAttachCommand": {
         "rstudio-start": "rserver"
     },
-  "forwardPorts": [
+    "forwardPorts": [
         8787
     ],
-  "portsAttributes": {
+    "portsAttributes": {
         "8787": {
             "label": "RStudio IDE"
         }
     }
-	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	// "forwardPorts": [],
-
-	// Use 'postCreateCommand' to run commands after the container is created.
-	// "postCreateCommand": "sh .devcontainer/config.sh",
-
-	// Configure tool-specific properties.
-	// "customizations": {
-	//	"vscode": {
-	//		"extensions":
-	//		["ms-toolsai.jupyter", 
-	//		"ms-python.vscode-pylance",
-	//		"njpwerner.autodocstring",
-	//	    "yzhang.markdown-all-in-one"],
-	//		"settings": {"python.testing.pytestArgs": [
-	//			"tests"
-	//		],
-	//		"python.testing.unittestEnabled": false,
-	//		"python.testing.pytestEnabled": true}
-	//	}
-	//}
-
-	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
-	// "remoteUser": "root"
 }
