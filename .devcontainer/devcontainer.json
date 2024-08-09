@@ -1,9 +1,8 @@
 {
-    "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+    "image": "ghcr.io/rocker-org/devcontainer/tidyverse:4.3",
     "features": {
         "ghcr.io/rocker-org/devcontainer-features/rstudio-server": {
-            "singleUser": true,
-            "allowReinstal": true
+            "singleUser": true
         }
     },
     "postAttachCommand": {
