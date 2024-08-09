@@ -1,8 +1,10 @@
 {
-    "image": "ghcr.io/rocker-org/devcontainer/tidyverse",
-    "features": {
-        "ghcr.io/rocker-org/devcontainer-features/rstudio-server": {}
-    },
+    "image": "ghcr.io/rocker-org/tidyverse:4.4.1",
+    // "features": {
+    //     "ghcr.io/rocker-org/devcontainer-features/rstudio-server": {
+    //         "singleUser": true
+    //     }
+    // },
     "postAttachCommand": {
         "rstudio-start": "rserver"
     },
