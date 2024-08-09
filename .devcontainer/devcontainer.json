@@ -1,10 +1,11 @@
 {
-    "image": "ghcr.io/rocker-org/tidyverse:4.4.1",
-    // "features": {
-    //     "ghcr.io/rocker-org/devcontainer-features/rstudio-server": {
-    //         "singleUser": true
-    //     }
-    // },
+    "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+    "features": {
+        "ghcr.io/rocker-org/devcontainer-features/rstudio-server": {
+            "singleUser": true,
+            "allowReinstal": true
+        }
+    },
     "postAttachCommand": {
         "rstudio-start": "rserver"
     },
