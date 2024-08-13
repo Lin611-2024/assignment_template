@@ -1,5 +1,5 @@
 {
-    "image": "ghcr.io/rocker-org/devcontainer/tidyverse:4.3",
+    "image": "ghcr.io/lin611-2024/devcontainer/bayesdevcontainer:4",
     "features": {
         "ghcr.io/rocker-org/devcontainer-features/rstudio-server": {
             "singleUser": true
