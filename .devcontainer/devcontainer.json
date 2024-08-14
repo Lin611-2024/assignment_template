@@ -6,8 +6,8 @@
         }
     },
     "postAttachCommand": {
-        "github_user": 'echo "GITHUB_USER=$GITHUB_USER">>~/.Renviron',
-        "github_token": 'echo "GITHUB_TOKEN=$GITHUB_TOKEN">>~/.Renviron',
+        "github_user": "echo \"GITHUB_USER=$GITHUB_USER\">>~/.Renviron",
+        "github_token": "echo \"GITHUB_TOKEN=$GITHUB_TOKEN\">>~/.Renviron",
         "rstudio-start": "rserver"
     },
     "forwardPorts": [
