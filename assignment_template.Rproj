@@ -11,3 +11,7 @@ Encoding: UTF-8
 
 RnwWeave: knitr
 LaTeX: pdfLaTeX
+
+UseNativePipeOperator: Yes
+
+DefaultOpenDocs: README.md
