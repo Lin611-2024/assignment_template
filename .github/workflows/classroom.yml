@@ -7,10 +7,27 @@ permissions:
   actions: read
   contents: read
 jobs:
+ runs-on: ubuntu-latest
+    outputs:
+      paths: ${{ steps.list-files.outputs.paths }}
+    steps:
+      - name: List Files
+        id: list-files
+        uses: mirko-felice/list-files-action@v3.0.5
+        with:
+          repo: ${{ github.repository }}
+          ref: ${{ github.ref }}
+          path: "tests/testthat"
+          ext: ".R"
+
   run-autograding-tests:
+    needs: list-files  
     runs-on: ubuntu-latest
     container: docker://ghcr.io/lin611-2024/devcontainer/bayesdevcontainer:4
     if: github.actor != 'github-classroom[bot]'
+    strategy:
+      matrix:
+        paths: ${{ fromJson(needs.list-files.outputs.paths) }}    
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
@@ -19,8 +36,8 @@ jobs:
       uses: classroom-resources/autograding-command-grader@v1
       with:
         test-name: runtest
-        setup-command: ''
-        command: Rscript tests/testthat.R
+        setup-command: Rscript -e "source('.Rprofile'); makesource()"
+        command: Rscript ${{ matrix.paths }}
         timeout: 10
         max-score: 10
     - name: Autograding Reporter

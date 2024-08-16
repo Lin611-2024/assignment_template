@@ -1,5 +1,5 @@
-runtests <- function(){
-  if (!fs::dir_exists(here::here("tests", "R"))){
+makesource <- function(){
+ if (!fs::dir_exists(here::here("tests", "R"))){
     fs::dir_create(here::here("tests", "R"))
   }
   
@@ -23,6 +23,12 @@ runtests <- function(){
     scrubbed_rscript,
     here::here("tests", "R", "assignment.R")
   )
+}
+
+
+runtests <- function(){
+ 
+  makesource()
   
   source(here::here("tests", "testthat.R"))
 }
