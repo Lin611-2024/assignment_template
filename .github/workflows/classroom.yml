@@ -37,7 +37,6 @@ jobs:
       uses: classroom-resources/autograding-command-grader@v1
       with:
         test-name: runtest
-        setup-command: Rscript -e "source('.Rprofile'); makesource()"
         command: Rscript ${{ matrix.paths }}
         timeout: 10
         max-score: 10
