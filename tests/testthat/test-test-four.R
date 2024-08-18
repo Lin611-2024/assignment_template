@@ -1,5 +1,6 @@
 library(testthat)
-source(here::here("tests", "R", "assignment.R"))
+lin611runtest::makesource(here::here("assignment.qmd"))
+source(here::here("tests", "r", "assignment.R"))
 
 test_that("assignment", {
   expect_equal(four, 4)
