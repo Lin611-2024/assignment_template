@@ -7,6 +7,7 @@
     },
     "postAttachCommand": {
         "github_user": "echo \"GITHUB_USER=$GITHUB_USER\">>~/.Renviron && echo \"GITHUB_TOKEN=$GITHUB_TOKEN\">>~/.Renviron",
+        "project-rename": "mv assignment_template.Rproj $(basename $(pwd)).Rproj",
         "rstudio-start": "rserver"
     },
     "forwardPorts": [
