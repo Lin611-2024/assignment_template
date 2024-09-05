@@ -7,9 +7,7 @@
     },
     "postAttachCommand": {
         "github_user": "echo \"GITHUB_USER=$GITHUB_USER\">>~/.Renviron && echo \"GITHUB_TOKEN=$GITHUB_TOKEN\">>~/.Renviron",
-        "rebase": "git config pull.rebase false",
-        "project-rename": "mv *.Rproj $(basename $(pwd)).Rproj",
-        "rstudio-start": "rserver",
+        "project-rename": "git config pull.rebase false && git pull && (mv *.Rproj $(basename $(pwd)).Rproj || echo 'moved' ) && rserver",
         "awake": "timeout --foreground 90m sh .devcontainer/awake.sh"
     },
     "forwardPorts": [
